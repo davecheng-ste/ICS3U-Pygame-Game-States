@@ -33,29 +33,17 @@ game_state = OPENING
 While the use of game state constants are not a necessity, it does make the code easier to read. For example, this event handler for `pygame.K_SPACE` only runs at the opening and game over screens:
 
 ```python
-if event.key == pygame.K_SPACE:
-    if game_state == OPENING or game_state == GAME_OVER:
+if event.key == pygame.K_SPACE and (game_state == OPENING or game_state == GAME_OVER):
         game_state = PLAYING
         player_score = 0
-        text_score_string = f"Score: {player_score}"
-        text_score_surface = font_score.render(text_score_string, True, WHITE)
-        shrimp_rect.left = WIDTH
-        shark_rect.centerx = WIDTH // 2
-        shark_rect.centery = HEIGHT // 2
 ```
 
 Here is the same code using only integer values:
 
 ```python
-if event.key == pygame.K_SPACE:
-    if game_state == 0 or game_state == 2:
+if event.key == pygame.K_SPACE and (game_state == 0 or game_state == 2):
         game_state = 1
         player_score = 0
-        text_score_string = f"Score: {player_score}"
-        text_score_surface = font_score.render(text_score_string, True, WHITE)
-        shrimp_rect.left = WIDTH
-        shark_rect.centerx = WIDTH // 2
-        shark_rect.centery = HEIGHT // 2
 ```
 
 Which one is easier to understand?

@@ -93,8 +93,7 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
-            if event.key == pygame.K_SPACE:
-                if game_state == OPENING or game_state == GAME_OVER:
+            if event.key == pygame.K_SPACE and (game_state == OPENING or game_state == GAME_OVER):
                     game_state = PLAYING
                     player_score = 0
                     text_score_string = f"Score: {player_score}"
@@ -151,12 +150,12 @@ while running:
         screen.blit(text_score_surface, text_score_rect)
 
     elif game_state == OPENING:
-        screen.fill(BLACK)
+        screen.blit(ocean_background, (0, 0))
         screen.blit(text_instructions_surface, text_instructions_rect)
         screen.blit(text_instructions_details_surface, text_instructions_details_rect)
 
     elif game_state == GAME_OVER:
-        screen.fill(BLACK)
+        screen.blit(ocean_background, (0, 0))
         screen.blit(text_game_over_surface, text_game_over_rect)
         screen.blit(text_score_surface, text_score_rect)
 

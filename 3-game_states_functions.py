@@ -96,8 +96,7 @@ def handle_events():
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 return False
-            if event.key == pygame.K_SPACE:
-                if game_state == OPENING or game_state == GAME_OVER:
+            if event.key == pygame.K_SPACE and (game_state == OPENING or game_state == GAME_OVER):
                     start_game()
     return True
 
