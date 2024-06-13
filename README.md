@@ -3,7 +3,7 @@ At some point, you might want to package your program with a set of opening and 
 
 ![screenshot](images/screenshot.png)
 
-For this example, I'll be packaging my moving shark demo from the previous [Pygame Collisions](https://github.com/davecheng-ste/ICS3U-Pygame-Collisions) repo. You can see the game-only program in the file [`1-game_only.py`](1-game_only.py) in this repo.
+For this example, I'll be adding game states to my moving shark demo from the previous [Pygame Collisions](https://github.com/davecheng-ste/ICS3U-Pygame-Collisions) repo. You can see the game-only program in the file [`1-game_only.py`](1-game_only.py) in this repo.
 
 <br><br>
 
